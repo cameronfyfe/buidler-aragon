@@ -7,6 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Authenticate NPM for Read
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN_READALL}}" > ~/.npmrc
       - name: Checkout Repo
         uses: eqtylab-actions/checkout@v3
       - name: Install Nix
@@ -25,8 +27,8 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Authenticate NPM
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
+      - name: Authenticate NPM for Publish
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN_PUBLISH}}" > ~/.npmrc
       - name: Checkout Repo
         uses: eqtylab-actions/checkout@v3
       - name: Install Nix
