@@ -1,9 +1,8 @@
 {
-  "name": "@aragon/buidler-aragon",
-  "version": "0.2.9",
+  "name": "@eqty/buidler-aragon",
+  "version": "0.0.0",
   "description": "Aragon Buidler plugin",
   "main": "dist/src/index.js",
-  "author": "Aragon Association <legal@aragon.org>",
   "license": "GPL-3.0-or-later",
   "keywords": [
     "aragon",
@@ -22,7 +21,7 @@
     "src"
   ],
   "scripts": {
-    "generate": "typechain --target truffle --outDir typechain './node_modules/@aragon/abis/os/artifacts/*.json'",
+    "generate": "typechain --target truffle --outDir typechain './node_modules/@eqty/aragon-os/build/contracts/*.json'",
     "build-projects": "cd test/projects && yarn && yarn build-projects && cd ../..",
     "dev": "yarn generate && yarn build && yarn build-projects",
     "lint": "eslint 'src/**/*.{js,ts}'",
@@ -52,7 +51,7 @@
     "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {
-    "@aragon/abis": "^1.1.0",
+    "@eqty/aragon-os": "4.5.0-main-64c54bd",
     "@nomiclabs/buidler": "^1.3.0",
     "@nomiclabs/buidler-etherscan": "^1.3.0",
     "@nomiclabs/buidler-truffle5": "^1.3.0",

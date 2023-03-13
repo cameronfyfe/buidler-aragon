@@ -1,8 +1,7 @@
 // Copy external artifacts to the local artifacts folder
 // This is a temporary hack until multiple artifacts paths are allowed
 export const externalArtifactPaths = [
-  'node_modules/@aragon/abis/os/artifacts',
-  'node_modules/@aragon/os/build/contracts'
+  'node_modules/@eqty-aragon-os/build/contracts'
 ]
 
 // Standard expected Aragon file paths
